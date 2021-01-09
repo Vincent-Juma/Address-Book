@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(10, 10, 10, 0.3);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    background: url(/css/footer.webp); 
+} 
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  nav li span {
+      padding-left: 5px;
+  }
+  li a {
+      padding: 5px;
+      background-color: #fff;
+      text-decoration: none;
+  }
+  .cart ion-icon {
+      vertical-align: bottom;
+      font-size: 20px;
+      padding-right: 5px;
+  }
+  .cart a {
+        background-color: brown;
+        color: wheat;
+        cursor: pointer;
+        text-decoration: none;
+  } 
+  .container {
+    background-image: url(/css/zoom.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 0%;
+    font-size: large;
+    color: white;
+}
+.img {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+    }
+
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+h2 {
+    color: thistle;
+    font-size: x-large;
+}
+body {
+    background-color: wheat;
+    margin: 5%;
+    margin-top: 0%;
+
+}
+
+.container>img {
+    width: 100%;
+}
+header {
+    display: inline-flex;
+}
+#About {
+    background: url(/css/zoom4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-size: xx-large;
+    border: solid green;
+    text-align: center;
+}
+  .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+      scroll-padding-bottom: 100px;
+      text-align: center;
+  }
+  .order-now {
+      position: absolute;
+      width: 100%;
+      background-color: blanchedalmond;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      cursor: pointer;
+      text-align: center;
+      text-overflow: clip;
+      text-shadow: teal;
+  }
+  .img:hover .order1,
+  .img:hover .order2,
+  .img:hover .order3,
+  .img:hover .order4,
+  .img:hover .order5,
+  .img:hover .order6,
+  .img:hover .order7,
+  .img:hover .order8,
+  .img:hover .order9 {
+      bottom: 50px;
+      opacity: 1;
+      padding: 10px;
+      text-decoration: none;
+  }
+  #welcome {
+      background-color: rgb(26, 1, 1);
+      text-align: center;
+      font-size: xx-large;
+      border-radius: 30%;
+      color: whitesmoke
+  }
+  .footer {
+      color: white;
+      font-size: x-large;
+      background: url(./big.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: end;
+  }
+  .buy {
+    background-color: rgba(10, 10, 10, 0.3);
+    padding: 20%;
+    text-align: center;
+    font-size: large;
+  } 
+  i {
+      color: yellow;
+  }
