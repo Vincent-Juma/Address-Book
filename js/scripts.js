@@ -121,11 +121,11 @@ function setItems(product) {
 function displayOrder() {
     let orderItems = localStorage.getItem("productsOrdered");
     orderItems = JSON.parse(orderItems);
-    let buy = document.querySelector('.products');
+    let productContainer = document.querySelector('.products');
     if( orderItems && buy) {
         buy.innerHTML = '';
         Object.values(orderItems).map(item => {
-            buy.innerHTML += `
+            productContainer.innerHTML += `
             <div class="product">
             <ion-icon name="close-circle"></ion-icon>
             <img src="/css/${item.crust}.jpg">
@@ -133,9 +133,9 @@ function displayOrder() {
             </div>
             <div class="price">Ksh${item.price}.00</div>
             <div class="quantity">
-            <ion-icon class = "decrease" name="arrow-dropleft-circle"></ion-icon>
+            <ion-icon class = "decrease" name="chevron-down-circle-outline"></ion-icon>
             <span>${item.Ordered}</span>
-            <ion-icon class = "increase" name="arrow-dropright-circle"></ion-icon>
+            <ion-icon class = "increase" name="add-circle-outline"></ion-icon>
             </div>
             <div class="total">
             Ksh${

@@ -100,7 +100,7 @@ header {
     border: solid green;
     text-align: center;
 }
-  .container .buy {
+  .container .product-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -148,7 +148,7 @@ header {
       background-size: cover;
       text-align: end;
   }
-  .buy {
+  .product .product-container {
     background-color: rgba(10, 10, 10, 0.3);
     text-align: center;
     font-size: large;
@@ -157,7 +157,7 @@ header {
     margin: 0 auto;
     margin-top: 50px;
   }
-  .buy ion-icon {
+  .product-container ion-icon {
     font-size: 25px;
     color: blue;
     margin-left: 10px;
