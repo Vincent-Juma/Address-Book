@@ -72,7 +72,6 @@ function onLoadOrderNumbers() {
 }
 
 function orderNumbers(product) {
-    console.log("The product clicked is", product);
     let productNumbers = localStorage.getItem('orderNumbers');
     localStorage.setItem('orderNumbers', 1);
     productNumbers = parseInt(productNumbers);
@@ -122,13 +121,14 @@ function displayOrder() {
     let orderItems = localStorage.getItem("productsOrdered");
     orderItems = JSON.parse(orderItems);
     let productContainer = document.querySelector('.products');
-    if( orderItems && buy) {
-        buy.innerHTML = '';
+    let orderCost = localStorage.getItem('totalCost');
+    if( orderItems && productContainer) {
+        productContainer.innerHTML = '';
         Object.values(orderItems).map(item => {
             productContainer.innerHTML += `
             <div class="product">
             <ion-icon name="close-circle"></ion-icon>
-            <img src="/css/${item.crust}.jpg">
+            <img src="/css/${item.size}.jpg">
             <span>${item.name}</span>
             </div>
             <div class="price">Ksh${item.price}.00</div>
@@ -145,6 +145,15 @@ function displayOrder() {
             
 
         });
+        productContainer.innerHTML += `
+        <div class="basketTotalContainer">
+        <h4 class="basketTotalTitle">
+        Order Total:
+        </h4>
+        <h4 class="basketTotal">    
+        Ksh.${orderCost}.00
+        </h4>
+        `;
     }
 }
 
