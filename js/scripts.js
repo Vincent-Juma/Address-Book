@@ -161,7 +161,7 @@ displayOrder();
 
 
 //cart box
-const order = document.querySelector('.order');
+const order = document.querySelector('.cart');
 const orderBox = document.querySelector('.order-box');
 const orderClose = document.querySelector('.fa-close');
 order.addEventListener('click', function() {
@@ -176,6 +176,30 @@ order.addEventListener('click', function() {
     // orderP.innerHTML = products;
 
     const cardBoxTable = orderBox.querySelector('table');
+
+
+    // adding data to shopping cart 
+	const iconShoppingP = document.querySelector('.iconShopping p');
+	let no = 0;
+	JSON.parse(localStorage.getItem('items')).map(data=>{
+		no = no+data.no
+;	});
+	iconShoppingP.innerHTML = no;
+
+
+	//adding cartbox data in table
+	const cardBoxTable = cartBox.querySelector('table');
+	let tableData = '';
+	tableData += '<tr><th>S no.</th><th>Item Name</th><th>Item No</th><th>item Price</th><th></th></tr>';
+	if(JSON.parse(localStorage.getItem('items'))[0] === null){
+		tableData += '<tr><td colspan="5">No items found</td></tr>'
+	}else{
+		JSON.parse(localStorage.getItem('items')).map(data=>{
+			tableData += '<tr><th>'+data.id+'</th><th>'+data.name+'</th><th>'+data.no+'</th><th>'+data.price+'</th><th><a href="#" onclick=Delete(this);>Delete</a></th></tr>';
+		});
+	}
+	cardBoxTable.innerHTML = tableData;
+}
 
 
 

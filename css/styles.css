@@ -236,7 +236,7 @@ header {
       background: url(/css/HD.jpeg);
       z-index: 99999;
       transition: 0.2s linear;
-      transform: scale(1);
+      transform: scale(0);
   }
   .order-box.active {
       transform: scale(2);
