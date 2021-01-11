@@ -92,7 +92,7 @@ header {
     display: inline-flex;
 }
 #About {
-    background: url(/css/zoom4.jpg);
+    background: url(/css/big.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: whitesmoke;
@@ -100,22 +100,16 @@ header {
     border: solid green;
     text-align: center;
 }
-  .container {
+  .container,
+  
+  .products-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 50px;
       scroll-padding-bottom: 100px;
       text-align: center;
-  }
-  .product-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    scroll-padding-bottom: 100px;
-    text-align: center;
-}
+  } 
   .order-now {
       position: absolute;
       width: 100%;
@@ -165,7 +159,7 @@ header {
     margin: 0 auto;
     margin-top: 50px;
   }
-  .product-container  {
+  .products-container  {
     background-color: rgba(10, 10, 10, 0.3);
     text-align: center;
     font-size: large;
@@ -174,7 +168,7 @@ header {
     margin: 0 auto;
     margin-top: 50px;
   }
-  .product-container ion-icon {
+  .products-container ion-icon {
     font-size: 25px;
     color: blue;
     margin-left: 10px;
@@ -186,7 +180,7 @@ header {
       max-width: 650px;
       display: flex;
       justify-content: flex-start;
-      border-bottom: 4px solid brown;
+      border-bottom: 4px solid gold brown;
       margin: 0 auto;
   }
   .product-title {
@@ -194,6 +188,7 @@ header {
   }
   .price {
     width: 15%;
+    border-bottom: 1px solid brown;
     display: flex;
     align-items: center;
   }
@@ -204,8 +199,8 @@ header {
       align-items: center;
   }
   .total {
-    width: 15%;
-    border-bottom: 2px solid brown;
+    width: 10%;
+    border-bottom: 1px solid brown;
     display: flex;
     align-items: center;
   }
@@ -229,7 +224,32 @@ header {
   .basketTotal {
       width: 10px;
   }
-
+  .order-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url(/css/HD.jpeg);
+      z-index: 99999;
+      transition: 0.2s linear;
+      transform: scale(1);
+  }
+  .order-box.active {
+      transform: scale(2);
+  }
+ .order .order-box  {
+      position: relative;
+      height: 70%;
+      width: 80%;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 
 
 

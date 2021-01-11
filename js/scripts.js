@@ -15,47 +15,56 @@ let products = [
     },
     {
         size: 'small',
-        crust: 'glutenFree',
+        crust: 'glutenfree',
         price: 750,
         Ordered: 0
     },
     {
         size: 'medium',
-        crust: 'crispy',
+        crust: 'crispy-medium',
         price: 1200,
         Ordered: 0
     },
     {
         size: 'medium',
-        crust: 'stuffed',
+        crust: 'stuffed-medium',
         price: 1350,
         Ordered: 0
     },
     {
         size: 'medium',
-        crust: 'glutenFree',
+        crust: 'glutenfree-medium',
         price: 1150,
         Ordered: 0
     },
     {
         size: 'large',
-        crust: 'crispy',
+        crust: 'crispy-large',
         price: 2000,
         Ordered: 0
     },
     {
         size: 'large',
-        crust: 'stuffed',
+        crust: 'stuffed-large',
         price: 2500,
         Ordered: 0
     },
     {
         size: 'large',
-        crust: 'glutenFree',
+        crust: 'glutenfree-large',
         price: 1850,
         Ordered: 0
     }
 ]
+function totalCost(product) {
+    let orderCost = localStorage.getItem('totalCost');
+    if (orderCost != null) {
+       orderCost = parseInt(orderCost);
+        localStorage.setItem("totalCost", orderCost + product.price);
+    } else {
+        localStorage.setItem("totalCost", product.price);
+    }
+}
 
 for (let i=0; i < orders.length; i++) {
     orders[i].addEventListener('click', () => {
@@ -105,17 +114,9 @@ function setItems(product) {
             [product.crust]: product
         }
  }
- function totalCost(product) {
-     let orderCost = localStorage.getItem('totalCost');
-     if (orderCost != null) {
-        orderCost = parseInt(orderCost);
-         localStorage.setItem("totalCost", orderCost + product.price);
-     } else {
-         localStorage.setItem("totalCost", product.price);
-     }
- }
-    localStorage.setItem('productsOrdered', JSON.stringify(orderItems));
+ localStorage.setItem('productsOrdered', JSON.stringify(orderItems));
 }
+
 
 function displayOrder() {
     let orderItems = localStorage.getItem("productsOrdered");
@@ -128,17 +129,17 @@ function displayOrder() {
             productContainer.innerHTML += `
             <div class="product">
             <ion-icon name="close-circle"></ion-icon>
-            <img src="/css/${item.size}.jpg">
+            <img src="/css/${item.crust}.jpeg">
             <span>${item.name}</span>
             </div>
-            <div class="price">Ksh${item.price}.00</div>
+            <div class="price">${item.price}</div>
             <div class="quantity">
             <ion-icon class = "decrease" name="chevron-down-circle-outline"></ion-icon>
             <span>${item.Ordered}</span>
             <ion-icon class = "increase" name="add-circle-outline"></ion-icon>
             </div>
             <div class="total">
-            Ksh${
+            Ksh.${
                 item.Ordered * item.price
             }.00
             </div>`;
@@ -149,17 +150,33 @@ function displayOrder() {
         <div class="basketTotalContainer">
         <h4 class="basketTotalTitle">
         Order Total:
-        </h4>
-        <h4 class="basketTotal">    
-        Ksh.${orderCost}.00
-        </h4>
+        </h4><br>
+        <h4 class="basketTotal">Ksh.<br> ${orderCost}.00 </h4>
         `;
     }
 }
 
-
 onLoadOrderNumbers();
 displayOrder();
+
+
+//cart box
+const order = document.querySelector('.order');
+const orderBox = document.querySelector('.order-box');
+const orderClose = document.querySelector('.fa-close');
+order.addEventListener('click', function() {
+        orderBox.classList.add('active');
+        
+    });
+    orderClose.addEventListener('click', function() {
+        orderBox.classList.remove('active');
+    });
+
+    const orderP = document.querySelector('.order p');
+    // orderP.innerHTML = products;
+
+    const cardBoxTable = orderBox.querySelector('table');
+
 
 
 
