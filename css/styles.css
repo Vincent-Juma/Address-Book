@@ -15,7 +15,9 @@ nav {
     justify-content: space-between;
     padding: 50px 60px 0 60px;
 }
+
 .overlay {
+
     position: absolute;
     top: 0;
     left: 0;
@@ -351,8 +353,7 @@ trials */
 .main .itemsBox .item a:hover{
 	background: #0f0f0fa5;
 }
-
-cart box */
+*/
 .orderBox{
 	position: fixed;
 	top: 0;
