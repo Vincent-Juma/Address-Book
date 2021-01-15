@@ -12,6 +12,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <script>
+		
+		function Delete(e){
+			let orderItems = [];
+			JSON.parse(localStorage.getItem('orderItems')).map(item=>{
+				if(item.crust != e.parentElement.parentElement.children[0].textContent){
+					
+					items.push(img);
+
+				}
+			});
+			localStorage.setItem('orderItems',JSON.stringify(orderItems));
+			window.location.reload();
+		};
+	</script>
     <title>Delight Pizza Inn</title>
 </head>
 <body>
@@ -25,7 +40,7 @@
                             <li><a href="./order.html">About</a></li>
                             <li class="order">
                                 <a href="./order.html">
-                                <ion-icon class= "iconShopping" name="basket"></ion-icon>order<span>0</span>
+                                <ion-icon class= "order" name="basket"></ion-icon>order<span>0</span>
                                 </a>
             
                             </li>
@@ -33,9 +48,102 @@
                     </nav>
                 </div>
             </header>
+            <div class="container"> 
 
-           
+                <div class="img">
+                    <img src="./css/crispy.jpeg"  height="100px"  width="150px" alt="">
+                    <h3>Small</h3>
+                    <h3>crispy</h3>
+                    <h3>vanilla</h3>
+                    <h3>Ksh. 900</h3>
+                    <a class="order-now order1" href="#">order-now</a>
+                </div>
+                <div class="img">
+                    <img src="./css/stuffed.jpeg"  height="100px"  width="150px" alt="">
+                    <h3>Small</h3>
+                    <h3>stuffed</h3>
+                    <h3>chocolate</h3>
+                    <h3>Ksh. 800</h3>
+                    <a class="order-now order2" href="#">order-now</a>
+                </div>
+                <div class="img">
+                    <img src="./css/glutenfree.jpeg"  height="100px"  width="150px" alt="">
+                    <h3>Small</h3>
+                    <h3>glutenfree</h3>
+                    <h3>sauced</h3>
+                    <h3>Ksh. 750</h3>
+                    <a class="order-now order3" href="#">order-now</a>
+                </div> 
+                <div class="img">
+                    <img src="./css/crispy-medium.jpeg"  height="150px"  width="200px" alt="">
+                    <h3>Medium</h3>
+                    <h3>stuffed</h3>
+                    <h3>vanilla</h3>
+                    <h3>Ksh. 1300</h3>
+                    <a class="order-now order4" href="#">order-now</a>
+                </div>
+                
+                <div class="img">
+                    <img src="./css/stuffed-medium.jpeg"  height="150px"  width="200px" alt="">
+                    <h3>Medium</h3>
+                    <h3>Crispy</h3>
+                    <h3>chocolate</h3>
+                    <h3>Ksh. 1200</h3>
+                    <a class="order-now order5" href="#">order-now</a>
+                </div>  
+                <div class="img">
+                    <img src="./css/glutenfree-medium.jpeg"  height="150px"  width="200px" alt="">
+                     <h3>Medium</h3>
+                     <h3>GlutenFree</h3>
+                    <h3>sauced</h3>
+                    <h3>Ksh. 1150</h3>
+                    <a class="order-now order6" href="#">order-now</a>
+                </div>   
+                <div class="img">
+                    <img src="/css/crispy-large.jpeg"  height="200px"  width="300px" alt="">
+                    <h3>Large</h3>
+                    <h3>Crispy</h3>
+                    <h3>vanilla</h3>
+                    <h3>Ksh. 2000</h3>
+                    <a class="order-now order7" href="#">order-now</a>
+                </div> 
+                <div class="img">
+                    <img src="/css/stuffed-large.jpeg"  height="200px"  width="300px" alt="">
+                    <h3>Large</h3>
+                    <h3>GlutenFree</h3>
+                    <h3>chocolate</h3>
+                    <h3>Ksh. 1800</h3>
+                    <a class="order-now order8" href="#">order-now</a>
+                </div> 
+        
+                <div class="img">
+                    <img src="/css/glutenfree-large.jpeg"  height="200px"  width="300px"  alt="">
+                    <h3>Large</h3>
+                    <h3>stuffed</h3>
+                    <h3>sauced</h3>
+                    <h3>Ksh. 2500</h3>
+                    <a class="order-now order9" href="#">order-now</a>
+                </div> 
+        
+            </div>
+            <div class="order-box">
+              <div class="cart">
+                  <i class="fa fa-close"></i>
+                  <h1>order</h1>
+                  <table></table>
+              </div>
+            <p></p>
+            </div>
+                <div class="orderBox">
+                    <div class="order">
+                        <i class="fa fa-close"></i>
+                        <h1>order</h1>
+                        <table></table>
+                    </div>
+                </div>
             
+            
+<<<<<<< HEAD
                 <div class="products-container">
                     <div class="product-header">
                     <h5 class="product-title">PRODUCT</h5>
@@ -53,6 +161,8 @@
                 </div>
             
             
+=======
+>>>>>>> 4d01e02a1c3f597e49bc78c0dea8072cc8e03627
                 <!-- script -->
                 <!-- <script src="index.js"></script>
             </body>
@@ -167,7 +277,7 @@
     </div>
 
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem deleniti recusandae explicabo a libero 
-        temporibus, obcaecati ipsum quis velit autem illo facilis eum in vel repellat modi quas itaque quae.</p>
+        temporibus, obcaecati ipsum quis velit autem illo facilis eum in vel repellat modi quas itaque quae.</p>-->
 
     <div class="product-container">
         <div class="product-header">
@@ -176,7 +286,7 @@
         <h5 class="quantity">QUANTITY</h5>
         <h5 class="total">TOTAL</h5>
      </div>
-        <div class="products"></div> -->
+        <div class="products"></div>  
 
     <!-- <div class="footer">
 
@@ -186,7 +296,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text">
               <a href="#" class="btn btn-primary">Confirm Our Taste</a>
             </div>
             <div class="card-footer text-muted">

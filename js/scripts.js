@@ -4,7 +4,11 @@ let products = [
     {
         size: 'small',
         crust: 'crispy',
+<<<<<<< HEAD
         toppings: 'vanilla',
+=======
+        toppings: 'mushroom',
+>>>>>>> 4d01e02a1c3f597e49bc78c0dea8072cc8e03627
         price: 800,
         Ordered: 0
     },
@@ -182,7 +186,7 @@ order.addEventListener('click', function() {
         orderBox.classList.remove('active');
     });
 
-    const orderP = document.querySelector('.order p');
+    const orderP = document.querySelector('.order span');
     // orderP.innerHTML = products;
 
     const cardBoxTable = orderBox.querySelector('table');
