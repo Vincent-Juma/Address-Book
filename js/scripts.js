@@ -223,56 +223,56 @@ let orders = document.querySelectorAll('.order-now');
 let products = [
     {
         size: 'small',
-        crust: 'pizza1',
+        crust: 'crispy',
         toppings: 'mushroom',
         price: 800,
         Ordered: 0
     },
     {
         size: 'small',
-        crust: 'pizza2',
+        crust: 'stuffed',
         price: 930,
         Ordered: 0
     },
     {
         size: 'small',
-        crust: 'pizza3',
+        crust: 'glutenfree',
         price: 750,
         Ordered: 0
     },
     {
         size: 'medium',
-        crust: 'pizza4',
+        crust: 'crispy-medium',
         price: 1200,
         Ordered: 0
     },
     {
         size: 'medium',
-        crust: 'pizza5',
+        crust: 'stuffed-medium',
         price: 1350,
         Ordered: 0
     },
     {
         size: 'medium',
-        crust: 'pizza6',
+        crust: 'glutenfree-medium',
         price: 1150,
         Ordered: 0
     },
     {
         size: 'large',
-        crust: 'pizza7',
+        crust: 'crispy-large',
         price: 2000,
         Ordered: 0
     },
     {
         size: 'large',
-        crust: 'pizza8',
+        crust: 'stuffed-large',
         price: 2500,
         Ordered: 0
     },
     {
         size: 'large',
-        crust: 'pizza9',
+        crust: 'glutenfree-large',
         price: 1850,
         Ordered: 0
     }
