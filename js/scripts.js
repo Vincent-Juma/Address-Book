@@ -4,6 +4,7 @@ let products = [
     {
         size: 'small',
         crust: 'crispy',
+        toppings: 'mushroom',
         price: 800,
         Ordered: 0
     },
@@ -172,7 +173,7 @@ order.addEventListener('click', function() {
         orderBox.classList.remove('active');
     });
 
-    const orderP = document.querySelector('.order p');
+    const orderP = document.querySelector('.order span');
     // orderP.innerHTML = products;
 
     const cardBoxTable = orderBox.querySelector('table');
