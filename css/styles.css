@@ -29,7 +29,7 @@ nav {
     position: absolute;
     z-index: 1;
     height: 100px;
-    background: url(/css/footer.webp); 
+    background: url(./footer.webp); 
 } 
 nav li {
     list-style: none;
@@ -57,7 +57,7 @@ nav li {
         text-decoration: none;
   } 
   .container {
-    background-image: url(/css/zoom.jpg);
+    background-image: url(./orderhd.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 0%;
@@ -94,7 +94,7 @@ header {
     display: inline-flex;
 }
 #About {
-    background: url(/css/big.jpg);
+    background: url(./big.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: whitesmoke;
@@ -235,7 +235,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: url(/css/HD.jpeg);
+      background: url(./HD.jpeg);
       z-index: 99999;
       transition: 0.2s linear;
       transform: scale(0);
