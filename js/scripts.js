@@ -4,54 +4,63 @@ let products = [
     {
         size: 'small',
         crust: 'crispy',
+        toppings: 'vanilla',
         price: 800,
         Ordered: 0
     },
     {
         size: 'small',
         crust: 'stuffed',
+        toppings: 'chocolate',
         price: 930,
         Ordered: 0
     },
     {
         size: 'small',
         crust: 'glutenfree',
+        toppings: 'sauced',
         price: 750,
         Ordered: 0
     },
     {
         size: 'medium',
         crust: 'crispy-medium',
+        toppings: 'vanilla',
         price: 1200,
         Ordered: 0
     },
     {
         size: 'medium',
         crust: 'stuffed-medium',
+        toppings: 'chocolate',
         price: 1350,
         Ordered: 0
     },
     {
         size: 'medium',
-        crust: 'glutenfree-medium',
+        crust: "glutenfree-medium",
+        toppings: 'sauced',
         price: 1150,
         Ordered: 0
     },
     {
         size: 'large',
         crust: 'crispy-large',
+        toppings: 'vanilla',
         price: 2000,
         Ordered: 0
     },
     {
         size: 'large',
         crust: 'stuffed-large',
+        toppings: 'chocolate',
         price: 2500,
         Ordered: 0
     },
     {
         size: 'large',
         crust: 'glutenfree-large',
+        toppings: 'sauced',
         price: 1850,
         Ordered: 0
     }
@@ -130,7 +139,7 @@ function displayOrder() {
             <div class="product">
             <ion-icon name="close-circle"></ion-icon>
             <img src="/css/${item.crust}.jpeg">
-            <span>${item.name}</span>
+            <span>${item.toppings}</span>
             </div>
             <div class="price">${item.price}</div>
             <div class="quantity">
@@ -160,6 +169,7 @@ onLoadOrderNumbers();
 displayOrder();
 
 
+<<<<<<< HEAD
 //cart box
 const order = document.querySelector('.order');
 const orderBox = document.querySelector('.order-box');
@@ -178,6 +188,108 @@ order.addEventListener('click', function() {
     const cardBoxTable = orderBox.querySelector('table');
 
 
+=======
+// //cart box
+// const order = document.querySelector('.order');
+// const orderBox = document.querySelector('.order-box');
+// const orderClose = document.querySelector('.fa-close');
+// order.addEventListener('click', function() {
+//         orderBox.classList.add('active');
+        
+//     });
+//     orderClose.addEventListener('click', function() {
+//         orderBox.classList.remove('active');
+//     });
+
+//     const orderSpan = document.querySelector('.order span');
+//     // orderP.innerHTML = products;
+
+//     const orderBoxTable = orderBox.querySelector('table');
+
+
+//     // adding data to shopping cart 
+// 	let Ordered = 0;
+// 	JSON.parse(localStorage.getItem('itemsOrdered')).map(item=>{
+// 		Ordered= Ordered+item.Ordered
+// ;	});
+// 	orderSpan.innerHTML = Ordered;
+
+
+// 	//adding orderbox data in table
+// 	let tableData = '';
+// 	tableData += '<tr><th>S Ordered.</th><th>Item Size</th><th>Item Ordered</th><th>item Price</th><th></th></tr>';
+// 	if(JSON.parse(localStorage.getItem('itemsOrdered'))[0] === null){
+// 		tableData += '<tr><td colspan="5">No items found</td></tr>'
+// 	}else{
+// 		JSON.parse(localStorage.getItem('itemsOrdered')).map(item=>{
+// 			tableData += '<tr><th>'+item.crust+'</th><th>'+item.size+'</th><th>'+item.ordered+'</th><th>'+item.price+'</th><th><a href="#" onclick=Delete(this);>Delete</a></th></tr>';
+// 		});
+// 	}
+// 	orderBoxTable.innerHTML = tableData;
+
+
+    window.onload = function(){
+        //cart box
+        
+    
+    
+        // adding data to localstorage
+        // const attToCartBtn = document.getElementsByClassName('order-now');
+        // let items = [];
+        // for(let i=0; i<attToCartBtn.length; i++){
+        //     attToCartBtn[i].addEventListener("click",function(e){
+        //         if(typeof(Storage) !== 'undefined'){
+        //             let item = {
+        //                     id:i+1,
+        //                     name:e.target.parentElement.children[0].textContent,
+        //                     price:e.target.parentElement.children[1].children[0].textContent,
+        //                     no:1
+        //                 };
+        //             if(JSON.parse(localStorage.getItem('items')) === null){
+        //                 items.push(item);
+        //                 localStorage.setItem("items",JSON.stringify(items));
+        //                 window.location.reload();
+        //             }else{
+        //                 const localItems = JSON.parse(localStorage.getItem("items"));
+        //                 localItems.map(data=>{
+        //                     if(item.id == data.id){
+        //                         item.no = data.no + 1;
+        //                     }else{
+        //                         items.push(data);
+        //                     }
+        //                 });
+        //                 items.push(item);
+        //                 localStorage.setItem('items',JSON.stringify(items));
+        //                 window.location.reload();
+        //             }
+        //         }else{
+        //             alert('local storage is not working on your browser');
+        //         }
+        //     });
+        // }
+        // adding data to shopping cart 
+        const orderSpan = document.querySelector('.order span');
+        let Ordered = 0;
+        JSON.parse(localStorage.getItem('items')).map(item=>{
+            Ordered = Ordered+item.Ordered
+    ;	});
+        orderSpan.innerHTML = Ordered;
+    
+    
+        //adding cartbox data in table
+        const orderBoxTable = orderBox.querySelector('table');
+        let tableData = '';
+        tableData += '<tr><th>S no.</th><th>Item Name</th><th>Item No</th><th>item Price</th><th></th></tr>';
+        if(JSON.parse(localStorage.getItem('orderItems'))[0] === null){
+            tableData += '<tr><td colspan="5">No items found</td></tr>'
+        }else{
+            JSON.parse(localStorage.getItem('orderItems')).map(item=>{
+                tableData += '<tr><th>'+data.id+'</th><th>'+item.name+'</th><th>'+item.Ordered+'</th><th>'+item.price+'</th><th><a href="#" onclick=Delete(this);>Delete</a></th></tr>';
+            });
+        }
+        cardBoxTable.innerHTML = tableData;
+    }
+>>>>>>> display major changes
 
 
 
